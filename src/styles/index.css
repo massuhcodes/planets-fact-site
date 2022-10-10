@@ -1,0 +1,18 @@
+.common {
+    --hr-padding: 24px;
+    --bottom-border-color: #97979733;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #070724;
+    font-family: "Antonio", sans-serif;
+    color: #fff;
+    background-image: url(/src/assets/background-stars.svg);
+}

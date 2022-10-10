@@ -1,0 +1,33 @@
+header {
+    border-bottom: solid thin var(--bottom-border-color);
+    padding: 16px var(--hr-padding);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.Header-subheader {
+    margin: 0;
+    padding: 0 var(--hr-padding);
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    font-family: "League Spartan", sans-serif;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom: solid thin var(--bottom-border-color);
+}
+
+.Header-subheader li {
+    padding: 22px 5px;
+}
