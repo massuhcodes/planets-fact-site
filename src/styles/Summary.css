@@ -1,0 +1,47 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 var(--hr-padding);
+    background-color: pink;
+}
+
+.summary h1 {
+    margin-top: 0;
+    margin-bottom: 10px; 
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 35px;
+}
+
+.summary p {
+    font-family: "League Spartan", sans-serif;
+    color: #525364;
+    line-height: 1.5;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.summary .wikipedia {
+    display: flex;
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+}
+
+.wikipedia span {
+    color: #838391;
+    font-weight: 100;
+}
+
+.wikipedia a {
+    color: #838391;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.wikipedia img {
+    margin-left: 5px;
+}

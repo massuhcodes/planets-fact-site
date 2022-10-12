@@ -1,3 +1,7 @@
+.Header-container {
+    height: 13%;
+}
+
 header {
     border-bottom: solid thin var(--bottom-border-color);
     padding: 16px var(--hr-padding);
@@ -9,7 +13,7 @@ header nav {
     align-items: center;
 }
 
-header h1 {
+header h2 {
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
@@ -23,11 +27,11 @@ header h1 {
     list-style: none;
     font-family: "League Spartan", sans-serif;
     letter-spacing: 2px;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: bold;
     border-bottom: solid thin var(--bottom-border-color);
 }
 
 .Header-subheader li {
-    padding: 22px 5px;
+    padding: 20px 5px;
 }

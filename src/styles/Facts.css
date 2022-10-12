@@ -1,0 +1,20 @@
+.facts {
+    padding: 0 var(--hr-padding);
+    display: grid;
+    row-gap: 10px;
+}
+
+.facts .fact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid thin var(--bottom-border-color);
+    padding: 10px var(--hr-padding);
+}
+
+.facts .fact .property {
+    font-family: "League Spartan", sans-serif;
+    font-size: 9px;
+    color: #ffffff80;
+    letter-spacing: 1.5px;
+}

@@ -6,7 +6,7 @@ export default function Header() {
         <div className="Header-container">
             <header className="common">
                 <nav>
-                    <h1>THE PLANETS</h1>
+                    <h2>THE PLANETS</h2>
                     <img src={hamburger} />
                 </nav>
             </header>
