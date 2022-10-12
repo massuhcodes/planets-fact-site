@@ -1,7 +1,6 @@
 .planet {
-    height: 40%;
+    height: 280px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
 }

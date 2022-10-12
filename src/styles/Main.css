@@ -1,6 +1,5 @@
 main {
     display: flex;
     flex-direction: column;
-    background-color: palevioletred;
-    height: 87%;
+    padding-bottom: 30px; 
 }

@@ -1,7 +1,3 @@
-.Header-container {
-    height: 13%;
-}
-
 header {
     border-bottom: solid thin var(--bottom-border-color);
     padding: 16px var(--hr-padding);
