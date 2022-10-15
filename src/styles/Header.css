@@ -1,17 +1,16 @@
 .Header-container {
     position: sticky;
     top: 0;
+    height: 10%;
 }
 
 header {
-    border-bottom: solid thin var(--bottom-border-color);
-    padding: 16px var(--hr-padding);
-}
-
-header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid thin var(--bottom-border-color);
+    padding: 16px var(--hr-padding);
+    height: 55%;
 }
 
 header nav img {
@@ -87,12 +86,14 @@ header h2 {
     padding: 0 var(--hr-padding);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     list-style: none;
     font-family: "League Spartan", sans-serif;
     letter-spacing: 2px;
     font-size: 9px;
     font-weight: bold;
     border-bottom: solid thin var(--bottom-border-color);
+    height: 45%;
 }
 
 .Header-subheader li {

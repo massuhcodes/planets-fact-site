@@ -1,41 +1,33 @@
 import "/src/styles/Header.css";
 import hamburger from "/src/assets/icon-hamburger.svg";
+import chevron from "/src/assets/icon-chevron.svg";
 
 export default function Header(props) {
-    const planetChoices = [
-        "MERCURY",
-        "VENUS",
-        "EARTH",
-        "MARS",
-        "JUPITER",
-        "SATURN",
-        "URANUS",
-        "NEPTUNE",
-    ].map((planet, index) => {
+    const choices = props.names.map((planet, index) => {
         let color;
         switch (planet) {
-            case "MERCURY":
+            case "mercury":
                 color = "#DEF4FC";
                 break;
-            case "VENUS":
+            case "venus":
                 color = "#F7CC7F";
                 break;
-            case "EARTH":
+            case "earth":
                 color = "#545BFE";
                 break;
-            case "MARS":
+            case "mars":
                 color = "#FF6A45";
                 break;
-            case "JUPITER":
+            case "jupiter":
                 color = "#ECAD7A";
                 break;
-            case "SATURN":
+            case "saturn":
                 color = "#FCCB6B";
                 break;
-            case "URANUS":
+            case "uranus":
                 color = "#65F0D5";
                 break;
-            case "NEPTUNE":
+            case "neptune":
                 color = "#497EFA";
                 break;
             default:
@@ -45,15 +37,15 @@ export default function Header(props) {
             <div
                 key={index.toString()}
                 className={`planet-choice common ${
-                    planet !== "NEPTUNE" ? "with-bottom-border" : ""
+                    planet !== "neptune" ? "with-bottom-border" : ""
                 }`}
-                onClick={props.compressOverhead}
+                onClick={() => props.getChoice(index)}
             >
                 <div className="dot--name">
                     <span className="dot" style={{ backgroundColor: color }} />
-                    <p>{planet}</p>
+                    <p>{planet.toUpperCase()}</p>
                 </div>
-                <img src="/src/assets/icon-chevron.svg" />
+                <img src={chevron} />
             </div>
         );
     });
@@ -66,17 +58,11 @@ export default function Header(props) {
     return (
         <div className="Header-container">
             <header className="common">
-                <nav>
-                    <h2>THE PLANETS</h2>
-                    <img
-                        id="hamburger"
-                        src={hamburger}
-                        onClick={expandOverhead}
-                    />
-                </nav>
+                <h2>THE PLANETS</h2>
+                <img id="hamburger" src={hamburger} onClick={expandOverhead} />
             </header>
             <div className="overhead-container common" id="overhead">
-                {planetChoices}
+                {choices}
             </div>
             <ul className="Header-subheader common">
                 <li>OVERVIEW</li>

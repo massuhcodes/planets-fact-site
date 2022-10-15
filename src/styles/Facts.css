@@ -1,5 +1,4 @@
 .facts {
-    margin-top: 28px;
     padding: 0 var(--hr-padding);
     display: grid;
     row-gap: 8px;

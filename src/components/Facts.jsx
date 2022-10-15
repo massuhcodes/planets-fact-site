@@ -1,11 +1,11 @@
 import "/src/styles/Facts.css";
 
-export default function Facts() {
+export default function Facts(props) {
     const facts = [
-        { property: "rotation time", value: "58.6 days" },
-        { property: "revolution time", value: "87.97 days" },
-        { property: "radius", value: "2,439.7 km" },
-        { property: "average temp.", value: "430°C" },
+        props.facts.one,
+        props.facts.two,
+        props.facts.three,
+        props.facts.four,
     ];
 
     const arrayOfFacts = facts.map((fact, index) => (
@@ -14,8 +14,6 @@ export default function Facts() {
             <span className="value">{fact.value.toUpperCase()}</span>
         </div>
     ));
-
-    console.log(arrayOfFacts);
 
     return <div className="facts common">{arrayOfFacts}</div>;
 }

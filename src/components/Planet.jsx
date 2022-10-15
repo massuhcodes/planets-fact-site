@@ -1,12 +1,12 @@
 import "/src/styles/Planet.css";
 
-export default function Planet() {
+export default function Planet(props) {
     return (
         <div className="planet">
             <img
-                src="/src/assets/planet-mercury.svg"
+                src={props.meta.picture}
                 className="planet-image"
-                style={{height:"111px"}}
+                style={{ height: `${props.meta.size.mobile}px` }}
             />
         </div>
     );
