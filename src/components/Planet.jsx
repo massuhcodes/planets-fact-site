@@ -2,11 +2,23 @@ import "/src/styles/Planet.css";
 
 export default function Planet(props) {
     return (
-        <div className="planet">
+        <div className="planet-container">
             <img
-                src={props.meta.picture}
-                className="planet-image"
-                style={{ height: `${props.meta.size.mobile}px` }}
+                className={props.name}
+                src={
+                    props.feature === "surface"
+                        ? props.images.overview
+                        : props.images[props.feature]
+                }
+            />
+            <img
+                className="with-magnifier"
+                src={props.images.surface}
+                style={
+                    props.feature === "surface"
+                        ? { opacity: "1" }
+                        : { opacity: "0" }
+                }
             />
         </div>
     );
