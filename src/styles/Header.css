@@ -1,101 +1,147 @@
-.Header-container {
+div.Header-container {
     position: sticky;
     top: 0;
-    height: 10%;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    flex: 0 0 auto;
 }
 
-header {
+div.Header-container header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid thin var(--bottom-border-color);
-    padding: 16px var(--hr-padding);
-    height: 55%;
+    border-bottom: solid thin #97979733;
+    padding: calc(8px + 1.5625vw);
 }
 
-header nav img {
-    transition: opacity 0.1s;
-}
-
-header h2 {
+div.Header-container header h2 {
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
+    font-size: 1.4rem;
 }
 
-.overhead-container {
+div.Header-container header img {
+    transition: opacity 0.1s;
+    cursor: pointer;
+}
+
+div.Header-container ul.horizontal-planet-choice-container {
+    display: none;
+}
+
+div.Header-container div.overhead-container {
     position: absolute;
     left: 0;
     right: 0;
     background-color: #070724;
-    padding-left: var(--hr-padding);
-    padding-right: var(--hr-padding);
     height: 0;
     overflow-y: hidden;
-    transition: height 0.1s;
-    box-shadow: 0 5px 5px #000000b1;
+    box-shadow: 0 0.2rem 0.3rem #000000b1;
 }
 
-.expanded {
-    padding-top: 15px;
-    padding-bottom: 20px;
-    height: 466px;
+div.Header-container div.overhead-container.expanded {
+    padding: calc(8px + 1.5625vw);
+    height: auto;
 }
 
-.planet-choice {
+div.Header-container div.overhead-container div.vertical-planet-choice {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding: calc(8px + 1.5625vw);
+    cursor: pointer;
 }
 
-.with-bottom-border {
-    border-bottom: solid thin var(--bottom-border-color);
+/* from the second-to-last child upwards */
+div.Header-container
+    div.overhead-container
+    div.vertical-planet-choice:nth-last-child(n + 2) {
+    border-bottom: solid thin #97979733;
 }
 
-.dot--name {
+div.Header-container
+    div.overhead-container
+    div.vertical-planet-choice
+    div.dot-name-container {
     display: flex;
     align-items: center;
 }
 
-.dot {
-    background-color: lightblue;
-    width: 17px;
-    height: 17px;
+div.Header-container
+    div.overhead-container
+    div.vertical-planet-choice
+    div.dot-name-container
+    span.dot {
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
 }
 
-.dot--name p {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 24px;
-    letter-spacing: 2px;
+div.Header-container
+    div.overhead-container
+    div.vertical-planet-choice
+    div.dot-name-container
+    span.name {
+    margin-left: calc(8px + 1.5625vw);
+    letter-spacing: 0.1rem;
     font-family: "League Spartan", sans-serif;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: bold;
 }
 
-.planet-choice img {
-    height: 7px;
-    margin-right: 8px;
+div.Header-container div.overhead-container .vertical-planet-choice img {
+    width: 0.3rem;
 }
 
-.Header-subheader {
+div.Header-container ul.features {
     margin: 0;
-    padding: 0 var(--hr-padding);
+    padding: 0 calc(8px + 1.5625vw);
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
     font-family: "League Spartan", sans-serif;
-    letter-spacing: 2px;
-    font-size: 9px;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+    color: #ffffff80;
     font-weight: bold;
-    border-bottom: solid thin var(--bottom-border-color);
-    height: 45%;
+    border-bottom: solid thin #97979733;
 }
 
-.Header-subheader li {
-    padding: 20px 5px;
+div.Header-container ul.features li {
+    padding: calc(8px + 1.5625vw);
+    /* to account for the thickness of the bottom border*/
+    padding-bottom: calc(8px + 1.5625vw - 0.15rem);
+    cursor: pointer;
+    border-bottom: 0.15rem solid transparent;
+}
+
+@media (min-width: 768px) {
+    div.Header-container header {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+
+    div.Header-container header img,
+    div.Header-container ul.features {
+        display: none;
+    }
+
+    div.Header-container header ul.horizontal-planet-choice-container {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+        font-family: "League Spartan", sans-serif;
+        font-size: 0.8rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        margin-top: calc(8px + 1.5625vw);
+    }
+
+    .horizontal-planet-choice {
+        cursor: pointer;
+    }
 }
