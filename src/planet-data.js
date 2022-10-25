@@ -40,10 +40,10 @@ export const planets = [
             one: { property: "rotation time", value: "58.6 days" },
             two: { property: "revolution time", value: "87.97 days" },
             three: { property: "radius", value: "2,439.7 km" },
-            four: { property: "average temp.", value: "430°c" },
+            four: { property: "average temperature", value: "430°c" },
         },
-        meta: {
-            picture: mercury,
+        featureImages: {
+            overview: mercury,
             structure: mercuryStructure,
             surface: mercurySurface,
         },
@@ -64,10 +64,10 @@ export const planets = [
             one: { property: "rotation time", value: "243 days" },
             two: { property: "revolution time", value: "224.7 days" },
             three: { property: "radius", value: "6,051.8 km" },
-            four: { property: "average temp.", value: "471°c" },
+            four: { property: "average temperature", value: "471°c" },
         },
-        meta: {
-            picture: venus,
+        featureImages: {
+            overview: venus,
             structure: venusStructure,
             surface: venusSurface,
         },
@@ -88,10 +88,10 @@ export const planets = [
             one: { property: "rotation time", value: "0.99 days" },
             two: { property: "revolution time", value: "365.26 days" },
             three: { property: "radius", value: "6,361 km" },
-            four: { property: "average temp.", value: "16°c" },
+            four: { property: "average temperature", value: "16°c" },
         },
-        meta: {
-            picture: earth,
+        featureImages: {
+            overview: earth,
             structure: earthStructure,
             surface: earthSurface,
         },
@@ -112,10 +112,10 @@ export const planets = [
             one: { property: "rotation time", value: "1.03 days" },
             two: { property: "revolution time", value: "1.88 years" },
             three: { property: "radius", value: "3,389.5 km" },
-            four: { property: "average temp.", value: "-28°c" },
+            four: { property: "average temperature", value: "-28°c" },
         },
-        meta: {
-            picture: mars,
+        featureImages: {
+            overview: mars,
             structure: marsStructure,
             surface: marsSurface,
         },
@@ -136,10 +136,10 @@ export const planets = [
             one: { property: "rotation time", value: "9.93 hours" },
             two: { property: "revolution time", value: "11.86 years" },
             three: { property: "radius", value: "69,911 km" },
-            four: { property: "average temp.", value: "-108°c" },
+            four: { property: "average temperature", value: "-108°c" },
         },
-        meta: {
-            picture: jupiter,
+        featureImages: {
+            overview: jupiter,
             structure: jupiterStructure,
             surface: jupiterSurface,
         },
@@ -160,10 +160,10 @@ export const planets = [
             one: { property: "rotation time", value: "10.8 hours" },
             two: { property: "revolution time", value: "29.46 yeaars" },
             three: { property: "radius", value: "58,232 km" },
-            four: { property: "average temp.", value: "-138°c" },
+            four: { property: "average temperature", value: "-138°c" },
         },
-        meta: {
-            picture: saturn,
+        featureImages: {
+            overview: saturn,
             structure: saturnStructure,
             surface: saturnSurface,
         },
@@ -184,10 +184,10 @@ export const planets = [
             one: { property: "rotation time", value: "17.2 hours" },
             two: { property: "revolution time", value: "84 years" },
             three: { property: "radius", value: "25,362 km" },
-            four: { property: "average temp.", value: "-195°c" },
+            four: { property: "average temperature", value: "-195°c" },
         },
-        meta: {
-            picture: uranus,
+        featureImages: {
+            overview: uranus,
             structure: uranusStructure,
             surface: uranusSurface,
         },
@@ -208,10 +208,10 @@ export const planets = [
             one: { property: "rotation time", value: "16.08 hours" },
             two: { property: "revolution time", value: "164.79 years" },
             three: { property: "radius", value: "24,622 km" },
-            four: { property: "average temp.", value: "-201°c" },
+            four: { property: "average temperature", value: "-201°c" },
         },
-        meta: {
-            picture: neptune,
+        featureImages: {
+            overview: neptune,
             structure: neptuneStructure,
             surface: neptuneSurface,
         },
