@@ -1,0 +1,217 @@
+/* Information.css */
+
+/* Mobile */
+
+div.information-features-container {
+    padding: calc(8px + 1.5625vw);
+    flex: 1 1 auto; /* the component must grow and shrink for all screen sizes*/
+}
+
+div.information-container {
+    flex-direction: column;
+    align-items: center;
+}
+
+div.information-container h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    font-size: 2.7rem;
+}
+
+div.information-container p {
+    font-family: "League Spartan", sans-serif;
+    color: #ffffff80;
+    line-height: 1.5;
+    font-size: 1.15rem;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+div.wikipedia-container {
+    align-items: center;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.15rem;
+    margin-top: calc(1rem + 1.5625vw);
+    margin-bottom: calc(8px + 1.5625vw);
+}
+
+div.wikipedia-container span {
+    font-weight: 100;
+}
+
+div.wikipedia-container a {
+    letter-spacing: 0.05rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s, text-decoration-color 0.3s;
+    text-decoration-color: #ffffff1a;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 3px;
+}
+a.mercury-link:hover,
+a.mercury-link:focus,
+a.mercury-link:active {
+    color: #def4fc;
+    text-decoration-color: #def4fc;
+}
+a.venus-link:hover,
+a.venus-link:focus,
+a.venus-link:active {
+    color: #f7cc7f;
+    text-decoration-color: #f7cc7f;
+}
+a.earth-link:hover,
+a.earth-link:focus,
+a.earth-link:active {
+    color: #545bfe;
+    text-decoration-color: #545bfe;
+}
+a.mars-link:hover,
+a.mars-link:focus,
+a.mars-link:active {
+    color: #ff6a45;
+    text-decoration-color: #ff6a45;
+}
+a.jupiter-link:hover,
+a.jupiter-link:focus,
+a.jupiter-link:active {
+    color: #ecad7a;
+    text-decoration-color: #ecad7a;
+}
+a.saturn-link:hover,
+a.saturn-link:focus,
+a.saturn-link:active {
+    color: #fccb6b;
+    text-decoration-color: #fccb6b;
+}
+a.uranus-link:hover,
+a.uranus-link:focus,
+a.uranus-link:active {
+    color: #65f0d5;
+    text-decoration-color: #65f0d5;
+}
+a.neptune-link:hover,
+a.neptune-link:focus,
+a.neptune-link:active {
+    color: #497efa;
+    text-decoration-color: #497efa;
+}
+
+div.wikipedia-container img {
+    margin-left: 0.5rem;
+    height: 0.85rem;
+}
+
+div.features-container {
+    display: none;
+}
+
+/* Mobile COMMONS */
+
+div.wikipedia-container span,
+div.wikipedia-container a {
+    color: #85859d;
+}
+
+div.information-container,
+div.wikipedia-container {
+    display: flex;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    div.information-features-container {
+        justify-content: space-between;
+    }
+
+    div.information-container {
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    div.information-container p {
+        text-align: left;
+    }
+
+    div.features-container {
+        display: grid;
+        row-gap: calc(8px + 1.5625vw);
+        font-family: "League Spartan", sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        list-style-type: none;
+        width: 43%;
+    }
+
+    /* handles "removing" hover effect on selected feature */
+    div.feature-container.selected {
+        background-color: var(--selected-Information-feature-background-color);
+    }
+    div.feature-container.selected::after {
+        background-color: transparent;
+    }
+
+    /* code background-color animation is also written */
+    div.feature-container {
+        padding: calc(1px + 1.5625vw) calc(8px + 1.5625vw);
+        border: solid thin #97979733;
+        cursor: pointer;
+        position: relative;
+    }
+    div.feature-container::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        height: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #ffffff0d;
+        transition: height ease-in-out 0.25s;
+    }
+    div.feature-container:hover::after {
+        height: 100%;
+        right: 0;
+    }
+
+    /* type */
+    div.feature-container span:nth-child(2) {
+        margin-left: calc(8px + 1.5625vw);
+    }
+
+    /* Tablet COMMONS */
+
+    div.feature-container span:nth-child(1) /* number */,
+    div.feature-container span:nth-child(2) {
+        color: #ffffff80;
+    }
+
+    div.information-features-container,
+    div.feature-container {
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Desktop and onwards */
+
+@media (min-width: 1440px) {
+    div.information-features-container {
+        flex-direction: column;
+        height: 100%;
+        padding-right: 0;
+    }
+
+    div.information-container,
+    div.features-container {
+        width: 100%;
+    }
+
+    div.features-container {
+        flex: 1 1 auto; /* this container must grow and shrink for desktop screens and onward */
+    }
+}
