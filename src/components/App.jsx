@@ -1,26 +1,56 @@
-import { useState, createContext } from "react";
-import { planets } from "/src/planet-data";
 import "/src/styles/App.css";
+import { useState, createContext, useEffect } from "react";
+import { planets } from "/src/planet-data";
+import { compressOverhead } from "../utils/utils";
 import Header from "/src/components/Header";
 import Main from "/src/components/Main";
 
+// create a content to pass data over to Main's components
 export const PlanetContext = createContext();
 
 export default function App() {
-    const [planet, setPlanet] = useState(planets[0]);
+    // get the saved planet
+    const storedPlanet = JSON.parse(localStorage.getItem("planet"));
+    // if no saved planet, have mercury be the planet state
+    const [planet, setPlanet] = useState(
+        storedPlanet ? storedPlanet : planets[0]
+    );
+    // overview will always be the intial feature state
+    const [feature, setFeature] = useState("overview");
 
-    function getChoice(index) {
-        document.getElementById("hamburger").style.opacity = "1";
-        document.getElementById("overhead").classList.remove("expanded");
+    // whenever a planet is selected save it here
+    useEffect(() => {
+        localStorage.setItem("planet", JSON.stringify(planet));
+    }, [planet]);
+
+    /**
+     * Get the planet the user has chosen
+     * @param {String} orientation - whether the index came from a horizontal (above mobile) or vertical (mobile) layout
+     * @param {Number} index - chosen planet's index
+     */
+    function getPlanet(orientation, index) {
+        if (orientation === "vertical") compressOverhead();
         setPlanet(planets[index]);
     }
 
+    /**
+     * Switch to the new feature user chose
+     * @param {String} feature - the chosen feature
+     */
+    function switchFeatureTo(feature) {
+        setFeature(feature);
+    }
+
     return (
-        <PlanetContext.Provider value={planet}>
+        <PlanetContext.Provider value={[planet, feature, switchFeatureTo]}>
             <div className="app">
                 <Header
-                    getChoice={getChoice}
-                    names={planets.map((planet) => planet.name)}
+                    planets={planets}
+                    chosenPlanet={planet}
+                    color={planet.color}
+                    chosenFeature={feature}
+                    getPlanet={getPlanet}
+                    switchFeatureTo={switchFeatureTo}
                 />
                 <Main />
             </div>
