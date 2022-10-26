@@ -43,7 +43,7 @@ export default function App() {
 
     return (
         <PlanetContext.Provider value={[planet, feature, switchFeatureTo]}>
-            <div className="app">
+            <div className="app-container">
                 <Header
                     planets={planets}
                     chosenPlanet={planet}
