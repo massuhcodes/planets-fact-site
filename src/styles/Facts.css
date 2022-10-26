@@ -1,20 +1,63 @@
-.facts {
-    padding: 0 var(--hr-padding);
+/* Facts.css */
+
+/* Mobile */
+
+div.facts-container {
+    padding: 0 calc(8px + 1.5625vw);
     display: grid;
-    row-gap: 8px;
+    row-gap: calc(8px + 1.5625vw);
+    flex: 1 2 auto;
 }
 
-.facts .fact {
+div.fact-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid thin var(--bottom-border-color);
-    padding: 10px var(--hr-padding);
+    border: solid thin #97979733;
+    padding: calc(8px + 1.5625vw);
 }
 
-.facts .fact .property {
+/* property */
+div.fact-container span:nth-child(1) {
     font-family: "League Spartan", sans-serif;
-    font-size: 9px;
+    font-size: 1rem;
     color: #ffffff80;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.1rem;
+}
+
+/* value */
+div.fact-container span:nth-child(2) {
+    font-size: 1.3rem;
+    text-align: end;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    div.facts-container {
+        grid-template-columns: repeat(auto-fit, minmax(4rem, auto));
+        column-gap: calc(8px + 1.5625vw);
+        flex: 0 0 auto;
+    }
+
+    div.fact-container {
+        display: grid;
+        row-gap: calc(8px + 1.5625vw);
+        padding: calc(8px + 1.5625vw);
+    }
+
+    /* value */
+    div.fact-container span:nth-child(2) {
+        text-align: start;
+    }
+}
+
+/* Desktop and onwards */
+
+@media (min-width: 1440px) {
+    div.facts-container {
+        flex: 0 1 auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
