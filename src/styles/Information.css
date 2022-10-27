@@ -4,6 +4,7 @@
 
 div.information-features-container {
     padding: calc(8px + 1.5625vw);
+    padding-top: 0;
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto; /* the component must grow and shrink for all screen sizes*/
 }
@@ -218,6 +219,10 @@ div.wikipedia-container img {
 /* Desktop and onwards */
 
 @media (min-width: 1440px) {
+    div.information-features-container {
+        padding: calc(8px + 1.5625vw);
+    }
+
     div.information-features-container {
         -webkit-flex-direction: column;
         flex-direction: column;
