@@ -1,6 +1,6 @@
 import "/src/styles/Header.css";
 import { nanoid } from "nanoid";
-import { expandOverhead, features } from "../utils/utils";
+import { toggleOverhead, features } from "../utils/utils";
 import hamburger from "/src/assets/icon-hamburger.svg";
 import chevron from "/src/assets/icon-chevron.svg";
 
@@ -67,7 +67,7 @@ export default function Header(props) {
             <header>
                 <h2>{"the planets".toUpperCase()}</h2>
                 {/* will be removed for larger-than-mobile screens */}
-                <img id="hamburger" src={hamburger} onClick={expandOverhead} />
+                <img id="hamburger" src={hamburger} onClick={toggleOverhead} />
                 {/* tablet, desktop, etc. */}
                 <ul className="horizontal-planet-choice-container">
                     {horizontalPlanetChoices}

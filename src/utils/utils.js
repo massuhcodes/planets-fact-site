@@ -1,24 +1,21 @@
 // utils.js
 
 /**
- * Expands Header component's overhead container when hamburger is clicked-on
+ * This method only adds the expanded class to the overhead-container in the Header component.
  */
-export function expandOverhead() {
+export function toggleOverhead() {
+    console.log("here");
     const hamburgerEl = document.getElementById("hamburger");
     const overheadEl = document.getElementById("overhead");
-    hamburgerEl.style.opacity = "0.1";
-    hamburgerEl.style.cursor = "auto";
-    overheadEl.classList.add("expanded");
-}
-/**
- * Compress Header component's overhead container when a planet has been picked
- */
-export function compressOverhead() {
-    const hamburgerEl = document.getElementById("hamburger");
-    const overheadEl = document.getElementById("overhead");
-    hamburgerEl.style.opacity = "1";
-    hamburgerEl.style.cursor = "pointer";
-    overheadEl.classList.remove("expanded");
+    // opened
+    if (hamburgerEl.style.opacity === "0.1") {
+        hamburgerEl.style.opacity = "1";
+        overheadEl.classList.remove("expanded");
+    } else {
+        // closed
+        hamburgerEl.style.opacity = "0.1";
+        overheadEl.classList.add("expanded");
+    }
 }
 
 /**

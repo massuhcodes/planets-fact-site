@@ -3,7 +3,7 @@
 import "/src/styles/App.css";
 import { useState, createContext, useEffect } from "react";
 import { planets } from "/src/planet-data";
-import { compressOverhead, handlePlanetFade } from "../utils/utils";
+import { toggleOverhead, handlePlanetFade } from "../utils/utils";
 import Header from "/src/components/Header";
 import Main from "/src/components/Main";
 
@@ -31,7 +31,7 @@ export default function App() {
      * @param {Number} index - chosen planet's index
      */
     function getPlanet(orientation, index) {
-        if (orientation === "vertical") compressOverhead();
+        if (orientation === "vertical") toggleOverhead();
         // animate planet change
         handlePlanetFade(setPlanet, planets[index]);
     }
