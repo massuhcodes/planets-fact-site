@@ -4,36 +4,28 @@
 
 div.information-features-container {
     padding: calc(8px + 1.5625vw);
+    -webkit-flex: 1 1 auto;
     flex: 1 1 auto; /* the component must grow and shrink for all screen sizes*/
 }
 
 div.information-container {
+    -webkit-flex-direction: column;
     flex-direction: column;
-    align-items: center;
 }
 
 div.information-container h1 {
     margin-top: 0;
-    margin-bottom: 0;
-    font-weight: 300;
     letter-spacing: 0.1rem;
     font-size: 2.7rem;
 }
 
 div.information-container p {
-    font-family: "League Spartan", sans-serif;
     color: #ffffff80;
     line-height: 1.5;
-    font-size: 1.15rem;
-    font-weight: 300;
     text-align: center;
-    margin-bottom: 0;
 }
 
 div.wikipedia-container {
-    align-items: center;
-    font-family: "League Spartan", sans-serif;
-    font-size: 1.15rem;
     margin-top: calc(1rem + 1.5625vw);
     margin-bottom: calc(8px + 1.5625vw);
 }
@@ -45,8 +37,8 @@ div.wikipedia-container span {
 div.wikipedia-container a {
     letter-spacing: 0.05rem;
     font-weight: 500;
-    margin-left: 0.5rem;
     cursor: pointer;
+    -webkit-transition: color 0.3s, text-decoration-color 0.3s;
     transition: color 0.3s, text-decoration-color 0.3s;
     text-decoration-color: #ffffff1a;
     text-decoration-thickness: 0.1rem;
@@ -102,7 +94,6 @@ a.neptune-link:active {
 }
 
 div.wikipedia-container img {
-    margin-left: 0.5rem;
     height: 0.85rem;
 }
 
@@ -122,14 +113,39 @@ div.wikipedia-container {
     display: flex;
 }
 
+div.information-container h1,
+div.information-container p {
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+div.information-container,
+div.wikipedia-container {
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+div.information-container p,
+div.wikipedia-container {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.15rem;
+}
+
+div.wikipedia-container a,
+div.wikipedia-container img {
+    margin-left: 0.5rem;
+}
+
 /* Tablet */
 
 @media (min-width: 768px) {
     div.information-features-container {
+        -webkit-justify-content: space-between;
         justify-content: space-between;
     }
 
     div.information-container {
+        -webkit-align-items: flex-start;
         align-items: flex-start;
         width: 50%;
     }
@@ -171,6 +187,7 @@ div.wikipedia-container {
         left: 0;
         bottom: 0;
         background-color: #ffffff0d;
+        -webkit-transition: height ease-in-out 0.25s;
         transition: height ease-in-out 0.25s;
     }
     div.feature-container:hover::after {
@@ -193,6 +210,7 @@ div.wikipedia-container {
     div.information-features-container,
     div.feature-container {
         display: flex;
+        -webkit-align-items: center;
         align-items: center;
     }
 }
@@ -201,17 +219,20 @@ div.wikipedia-container {
 
 @media (min-width: 1440px) {
     div.information-features-container {
+        -webkit-flex-direction: column;
         flex-direction: column;
         height: 100%;
         padding-right: 0;
     }
 
+    div.features-container {
+        flex: 1 1 auto; /* this container must grow and shrink for desktop screens and onward */
+    }
+
+    /* Desktop COMMONS */
+
     div.information-container,
     div.features-container {
         width: 100%;
-    }
-
-    div.features-container {
-        flex: 1 1 auto; /* this container must grow and shrink for desktop screens and onward */
     }
 }
