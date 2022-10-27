@@ -220,7 +220,7 @@ div.wikipedia-container img {
 
 @media (min-width: 1440px) {
     div.information-features-container {
-        padding: calc(8px + 1.5625vw);
+        padding-top: calc(8px + 1.5625vw);
     }
 
     div.information-features-container {
