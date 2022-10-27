@@ -19,8 +19,8 @@ img.with-magnifier {
 }
 
 div.planet-container img {
-    -webkit-animation: bounce 4s infinite ease-in-out;
-    animation: bounce 4s infinite ease-in-out;
+    -webkit-animation: bounce 2s infinite ease-in-out alternate;
+    animation: bounce 2s infinite ease-in-out alternate;
 }
 
 img.mercury {
@@ -169,46 +169,37 @@ img.neptune {
 /* KEYFRAMES */
 
 @-webkit-keyframes bounce {
-    0% {
+    from {
         -webkit-transform: translateY(0);
     }
-    50% {
-        -webkit-transform: translateY(-5px);
-    }
-    100% {
-        -webkit-transform: translateY(0);
+    to {
+        -webkit-transform: translateY(0.5rem);
     }
 }
 
 @keyframes bounce {
-    0% {
+    from {
         transform: translateY(0);
     }
-    50% {
-        transform: translateY(-5px);
+    to {
+        transform: translateY(0.5rem);
     }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-.initialFadeIn {
-    animation: fadeIn 1.2s;
-}
-
-.fadeIn {
-    animation: fadeIn 0.4s;
-}
-
-.fadeOut {
-    animation: fadeOut 0.4s;
 }
 
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
-    100% {
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
         opacity: 1;
     }
 }
@@ -220,4 +211,29 @@ img.neptune {
     100% {
         opacity: 0;
     }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* it takes 1.6s for the fade-out and fade-in animation to complete */
+.initialFadeIn {
+    -webkit-animation: fadeIn 1.6s;
+    animation: fadeIn 1.6s;
+}
+
+.fadeIn {
+    -webkit-animation: fadeIn 1.6s;
+    animation: fadeIn 0.4s;
+}
+
+.fadeOut {
+    -webkit-animation: fadeOut 0.4s;
+    animation: fadeOut 0.4s;
 }
