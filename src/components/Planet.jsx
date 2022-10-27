@@ -4,7 +4,7 @@ import "/src/styles/Planet.css";
 
 export default function Planet(props) {
     return (
-        <div id="planet-container" className="planet-container">
+        <div id="planet-container" className="planet-container initialFadeIn">
             <img
                 className={props.name}
                 src={
