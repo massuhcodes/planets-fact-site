@@ -1,8 +1,10 @@
+// Planet.jsx
+
 import "/src/styles/Planet.css";
 
 export default function Planet(props) {
     return (
-        <div className="planet-container">
+        <div id="planet-container" className="planet-container">
             <img
                 className={props.name}
                 src={
