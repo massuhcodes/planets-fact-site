@@ -41,7 +41,7 @@ export default function Information(props) {
                 <h1>{props.name.toUpperCase()}</h1>
                 <p>{props.info}</p>
                 <div className="wikipedia-container">
-                    <span>Source : </span>
+                    <span>Source</span>
                     {/** mercury's is the only link that needs to be addressed */}
                     <a
                         href={

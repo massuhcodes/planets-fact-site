@@ -35,6 +35,10 @@ div.wikipedia-container span {
     font-weight: 100;
 }
 
+div.wikipedia-container span::after {
+    content: ":";
+}
+
 div.wikipedia-container a {
     letter-spacing: 0.05rem;
     font-weight: 500;
@@ -133,7 +137,8 @@ div.wikipedia-container {
 }
 
 div.wikipedia-container a,
-div.wikipedia-container img {
+div.wikipedia-container img,
+div.wikipedia-container span::after {
     margin-left: 0.5rem;
 }
 
