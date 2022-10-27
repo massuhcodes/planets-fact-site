@@ -1,7 +1,45 @@
+/* Main.css */
+
+/* Mobile */
+
+/* Note: main and planet-information-container are the elements that occupy the remaining space */
+
 main {
-    height: 90%;
+    padding-bottom: calc(8px + 1.5625vw);
+    -webkit-flex: 1 0 auto;
+    flex: 1 0 auto; /* have this take up the entire space for all screen sizes */
     display: flex;
+    -webkit-flex-direction: column;
     flex-direction: column;
-    justify-content: space-between; 
-    padding-bottom: 8.5%;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    main {
+        padding-bottom: calc(15px + 1.5625vw);
+    }
+
+    div.planet-information-container {
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex: 1 0 auto;
+        flex: 1 0 auto; /* have this take up space for tablet screens and onwards */
+    }
+}
+
+/* Desktop and onwards */
+
+@media (min-width: 1440px) {
+    main {
+        width: 85%;
+        -webkit-align-self: center;
+        align-self: center;
+    }
+
+    div.planet-information-container {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
 }
