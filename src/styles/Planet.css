@@ -21,8 +21,6 @@ img.with-magnifier {
 div.planet-container img {
     -webkit-animation: bounce 4s infinite ease-in-out;
     animation: bounce 4s infinite ease-in-out;
-    -webkit-transition: height 1s;
-    transition: height 1s;
 }
 
 img.mercury {
@@ -191,5 +189,35 @@ img.neptune {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+.initialFadeIn {
+    animation: fadeIn 1.2s;
+}
+
+.fadeIn {
+    animation: fadeIn 0.4s;
+}
+
+.fadeOut {
+    animation: fadeOut 0.4s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
