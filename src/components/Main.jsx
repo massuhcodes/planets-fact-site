@@ -22,9 +22,9 @@ export default function Main() {
                 <Information
                     info={planet.info[feature]}
                     name={planet.name}
-                    linkColor={planet.color}
+                    linkColor={planet.hues.color}
                     feature={feature}
-                    featureBackgroundColor={planet.backgroundColor}
+                    featureBackgroundColor={planet.hues.backgroundColor}
                     switchFeatureTo={switchFeatureTo}
                 />
             </div>

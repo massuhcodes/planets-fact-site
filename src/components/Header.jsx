@@ -15,7 +15,7 @@ export default function Header(props) {
             <div className="dot-name-container">
                 <span
                     className="dot"
-                    style={{ backgroundColor: planet.color }}
+                    style={{ backgroundColor: planet.hues.color }}
                 />
                 <span className="name">{planet.name.toUpperCase()}</span>
             </div>

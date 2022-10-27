@@ -51,7 +51,7 @@ export default function App() {
                 <Header
                     planets={planets}
                     chosenPlanet={planet}
-                    color={planet.color}
+                    color={planet.hues.color}
                     chosenFeature={feature}
                     getPlanet={getPlanet}
                     switchFeatureTo={switchFeatureTo}

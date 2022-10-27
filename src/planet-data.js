@@ -34,8 +34,10 @@ export const planets = [
             surface:
                 "Mercury's surface is similar in appearance to the of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years. It is more heterogeneous than either Mars's or the Moon's.",
         },
-        color: "#DEF4FC",
-        backgroundColor: "#419EBB",
+        hues: {
+            color: "#DEF4FC",
+            backgroundColor: "#419EBB",
+        },
         facts: {
             one: { property: "rotation time", value: "58.6 days" },
             two: { property: "revolution time", value: "87.97 days" },
@@ -58,8 +60,10 @@ export const planets = [
             surface:
                 "Much of the Venusian surface appears to have been shaped by volcanic activity. Venus has several times as many volcanoes as Earth, and it has 167 large volcanoes that are over 100 km (60 mi) across. The only volcanic complex of this size on Earth is the Big Island of Hawaii.",
         },
-        color: "#F7CC7F",
-        backgroundColor: "#EDA249",
+        hues: {
+            color: "#F7CC7F",
+            backgroundColor: "#EDA249",
+        },
         facts: {
             one: { property: "rotation time", value: "243 days" },
             two: { property: "revolution time", value: "224.7 days" },
@@ -82,8 +86,10 @@ export const planets = [
             surface:
                 "The total surface area of Earth is about 510 million km2. The continental crust consists of lower density material such as the igneous rocks granite and andesite. Less common is basalt, a denser volcanic rock that is the primary constituent of the ocean floors.",
         },
-        color: "#545BFE",
-        backgroundColor: "#6D2ED5",
+        hues: {
+            color: "#545BFE",
+            backgroundColor: "#6D2ED5",
+        },
         facts: {
             one: { property: "rotation time", value: "0.99 days" },
             two: { property: "revolution time", value: "365.26 days" },
@@ -106,8 +112,10 @@ export const planets = [
             surface:
                 "Mars is a terrestrial planet whose surface consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt.",
         },
-        color: "#FF6A45",
-        backgroundColor: "#D14C32",
+        hues: {
+            color: "#FF6A45",
+            backgroundColor: "#D14C32",
+        },
         facts: {
             one: { property: "rotation time", value: "1.03 days" },
             two: { property: "revolution time", value: "1.88 years" },
@@ -130,8 +138,10 @@ export const planets = [
             surface:
                 "The best known feature of Jupiter is the Great Red Spot, a persistent anticyclonic storm located 22° south of the equator. It is known to have existed since at least 1831, and possibly since 1665.",
         },
-        color: "#ECAD7A",
-        backgroundColor: "#D83A34",
+        hues: {
+            color: "#ECAD7A",
+            backgroundColor: "#D83A34",
+        },
         facts: {
             one: { property: "rotation time", value: "9.93 hours" },
             two: { property: "revolution time", value: "11.86 years" },
@@ -154,8 +164,10 @@ export const planets = [
             surface:
                 "The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The planet's most famous feature is its prominent ring system, which is composed mostly of ice particles with a smaller amount of rocky debris and dust. ",
         },
-        color: "#FCCB6B",
-        backgroundColor: "#CD5120",
+        hues: {
+            color: "#FCCB6B",
+            backgroundColor: "#CD5120",
+        },
         facts: {
             one: { property: "rotation time", value: "10.8 hours" },
             two: { property: "revolution time", value: "29.46 yeaars" },
@@ -178,8 +190,10 @@ export const planets = [
             surface:
                 "The composition of Uranus's atmosphere is different from its bulk, consisting mainly of molecular hydrogen and helium. The helium molar fraction, i.e. the number of helium atoms per molecule of gas, is 0.15±0.03 in the upper troposphere.",
         },
-        color: "#65F0D5",
-        backgroundColor: "#1EC1A2",
+        hues: {
+            color: "#65F0D5",
+            backgroundColor: "#1EC1A2",
+        },
         facts: {
             one: { property: "rotation time", value: "17.2 hours" },
             two: { property: "revolution time", value: "84 years" },
@@ -202,8 +216,10 @@ export const planets = [
             surface:
                 "Neptune's atmosphere is 80% hydrogen and 19% helium. A trace amount of methane is also present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.",
         },
-        color: "#497EFA",
-        backgroundColor: "#2D68F0",
+        hues: {
+            color: "#497EFA",
+            backgroundColor: "#2D68F0",
+        },
         facts: {
             one: { property: "rotation time", value: "16.08 hours" },
             two: { property: "revolution time", value: "164.79 years" },
