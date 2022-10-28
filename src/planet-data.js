@@ -1,28 +1,3 @@
-import mercury from "/src/assets/planet-mercury.svg";
-import mercuryStructure from "/src/assets/planet-mercury-internal.svg";
-import mercurySurface from "/src/assets/geology-mercury.png";
-import venus from "/src/assets/planet-venus.svg";
-import venusStructure from "/src/assets/planet-venus-internal.svg";
-import venusSurface from "/src/assets/geology-venus.png";
-import earth from "/src/assets/planet-earth.svg";
-import earthStructure from "/src/assets/planet-earth-internal.svg";
-import earthSurface from "/src/assets/geology-earth.png";
-import mars from "/src/assets/planet-mars.svg";
-import marsStructure from "/src/assets/planet-mars-internal.svg";
-import marsSurface from "/src/assets/geology-mars.png";
-import jupiter from "/src/assets/planet-jupiter.svg";
-import jupiterStructure from "/src/assets/planet-jupiter-internal.svg";
-import jupiterSurface from "/src/assets/geology-jupiter.png";
-import saturn from "/src/assets/planet-saturn.svg";
-import saturnStructure from "/src/assets/planet-saturn-internal.svg";
-import saturnSurface from "/src/assets/geology-saturn.png";
-import uranus from "/src/assets/planet-uranus.svg";
-import uranusStructure from "/src/assets/planet-uranus-internal.svg";
-import uranusSurface from "/src/assets/geology-uranus.png";
-import neptune from "/src/assets/planet-neptune.svg";
-import neptuneStructure from "/src/assets/planet-neptune-internal.svg";
-import neptuneSurface from "/src/assets/geology-neptune.png";
-
 export const planets = [
     {
         name: "mercury",
@@ -43,11 +18,6 @@ export const planets = [
             two: { property: "revolution time", value: "87.97 days" },
             three: { property: "radius", value: "2,439.7 km" },
             four: { property: "average temperature", value: "430°c" },
-        },
-        featureImages: {
-            overview: mercury,
-            structure: mercuryStructure,
-            surface: mercurySurface,
         },
     },
     {
@@ -70,11 +40,6 @@ export const planets = [
             three: { property: "radius", value: "6,051.8 km" },
             four: { property: "average temperature", value: "471°c" },
         },
-        featureImages: {
-            overview: venus,
-            structure: venusStructure,
-            surface: venusSurface,
-        },
     },
     {
         name: "earth",
@@ -95,11 +60,6 @@ export const planets = [
             two: { property: "revolution time", value: "365.26 days" },
             three: { property: "radius", value: "6,361 km" },
             four: { property: "average temperature", value: "16°c" },
-        },
-        featureImages: {
-            overview: earth,
-            structure: earthStructure,
-            surface: earthSurface,
         },
     },
     {
@@ -122,11 +82,6 @@ export const planets = [
             three: { property: "radius", value: "3,389.5 km" },
             four: { property: "average temperature", value: "-28°c" },
         },
-        featureImages: {
-            overview: mars,
-            structure: marsStructure,
-            surface: marsSurface,
-        },
     },
     {
         name: "jupiter",
@@ -147,11 +102,6 @@ export const planets = [
             two: { property: "revolution time", value: "11.86 years" },
             three: { property: "radius", value: "69,911 km" },
             four: { property: "average temperature", value: "-108°c" },
-        },
-        featureImages: {
-            overview: jupiter,
-            structure: jupiterStructure,
-            surface: jupiterSurface,
         },
     },
     {
@@ -174,11 +124,6 @@ export const planets = [
             three: { property: "radius", value: "58,232 km" },
             four: { property: "average temperature", value: "-138°c" },
         },
-        featureImages: {
-            overview: saturn,
-            structure: saturnStructure,
-            surface: saturnSurface,
-        },
     },
     {
         name: "uranus",
@@ -200,11 +145,6 @@ export const planets = [
             three: { property: "radius", value: "25,362 km" },
             four: { property: "average temperature", value: "-195°c" },
         },
-        featureImages: {
-            overview: uranus,
-            structure: uranusStructure,
-            surface: uranusSurface,
-        },
     },
     {
         name: "neptune",
@@ -225,11 +165,6 @@ export const planets = [
             two: { property: "revolution time", value: "164.79 years" },
             three: { property: "radius", value: "24,622 km" },
             four: { property: "average temperature", value: "-201°c" },
-        },
-        featureImages: {
-            overview: neptune,
-            structure: neptuneStructure,
-            surface: neptuneSurface,
         },
     },
 ];
