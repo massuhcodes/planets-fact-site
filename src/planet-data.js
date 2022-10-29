@@ -1,4 +1,6 @@
-export const planets = [
+// planet-data.js
+
+export const planetData = [
     {
         name: "mercury",
         info: {
