@@ -52,11 +52,23 @@ div.fact-container span:nth-child(2) {
     }
 }
 
-/* Desktop and onwards */
+/* Desktop */
 
 @media (min-width: 1440px) {
     div.facts-container {
         padding-left: 0;
         padding-right: 0;
+    }
+}
+
+/* TV */
+
+@media (min-width: 2560px) {
+    div.fact-container span:nth-child(1) {
+        font-size: 1.4rem;
+    }
+
+    div.fact-container span:nth-child(2) {
+        font-size: 1.7rem;
     }
 }
