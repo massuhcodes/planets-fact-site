@@ -172,8 +172,14 @@ div.wikipedia-container span::after {
 
     /* handles "removing" hover effect on selected feature */
     div.feature-container.selected {
-        background-color: var(--selected-Information-feature-background-color);
+        background-color: var(--selected-information-feature-background-color);
     }
+    div.feature-container.selected:focus {
+        border: 1px solid white;
+    }
+    /* div.feature-container:focus {
+        background-color: red;
+    } */
     div.feature-container.selected::after {
         background-color: transparent;
     }
@@ -196,7 +202,8 @@ div.wikipedia-container span::after {
         -webkit-transition: height ease-in-out 0.25s;
         transition: height ease-in-out 0.25s;
     }
-    div.feature-container:hover::after {
+    div.feature-container:hover::after,
+    div.feature-container:focus::after {
         height: 100%;
         right: 0;
     }
