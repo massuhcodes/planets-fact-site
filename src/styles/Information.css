@@ -178,9 +178,6 @@ div.wikipedia-container span::after {
     div.feature-container.selected:focus {
         border: 1px solid white;
     }
-    /* div.feature-container:focus {
-        background-color: red;
-    } */
     div.feature-container.selected::after {
         background-color: transparent;
     }
