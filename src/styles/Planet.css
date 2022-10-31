@@ -173,7 +173,7 @@ img.neptune {
         -webkit-transform: translateY(0);
     }
     to {
-        -webkit-transform: translateY(0.5rem);
+        -webkit-transform: translateY(0.3rem);
     }
 }
 
@@ -182,7 +182,7 @@ img.neptune {
         transform: translateY(0);
     }
     to {
-        transform: translateY(0.5rem);
+        transform: translateY(0.3rem);
     }
 }
 
@@ -229,7 +229,7 @@ img.neptune {
 }
 
 .fadeIn {
-    -webkit-animation: fadeIn 1.6s;
+    -webkit-animation: fadeIn 0.4s;
     animation: fadeIn 0.4s;
 }
 
