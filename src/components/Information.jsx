@@ -3,7 +3,7 @@
 import "/src/styles/Information.css";
 import { nanoid } from "nanoid";
 import { features } from "../utils/utilities";
-import source from "/src/assets/icon-source.svg";
+import { Source } from "./svgs/icons/Source";
 
 export default function Information(props) {
     const link = "https://en.wikipedia.org/wiki/";
@@ -61,11 +61,13 @@ export default function Information(props) {
                     >
                         Wikipedia
                     </a>
-                    <img
-                        src={source}
+                    <div
+                        className="source-wrapper"
                         title="An image indicating further information is available"
                         alt="source"
-                    />
+                    >
+                        <Source />
+                    </div>
                 </div>
             </div>
             {/** this div will not appear for mobile screens, only for screens larger than mobile */}
