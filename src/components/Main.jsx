@@ -10,25 +10,24 @@ import { PlanetContext } from "./App";
 export default function Main() {
     // useContext is useful because it bypasses the need to propagate props through the hierchy
     const [planet, feature, switchFeatureTo] = useContext(PlanetContext);
+    const name = planet.name;
+    const info = planet.info[feature];
+    const hues = planet.hues;
+    const facts = planet.facts;
     return (
         <main>
             {/* provide the data each component requires through props */}
             <div className="planet-information-container">
-                <Planet
-                    images={planet.featureImages}
-                    feature={feature}
-                    name={planet.name}
-                />
+                <Planet feature={feature} name={name} />
                 <Information
-                    info={planet.info[feature]}
-                    name={planet.name}
-                    linkColor={planet.hues.color}
+                    info={info}
+                    name={name}
+                    hues={hues}
                     feature={feature}
-                    featureBackgroundColor={planet.hues.backgroundColor}
                     switchFeatureTo={switchFeatureTo}
                 />
             </div>
-            <Facts facts={planet.facts} />
+            <Facts facts={facts} />
         </main>
     );
 }
