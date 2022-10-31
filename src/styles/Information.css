@@ -254,3 +254,27 @@ div.wikipedia-container span::after {
         width: 100%;
     }
 }
+
+/* TV */
+
+@media (min-width: 2560px) {
+    div.information-container h1 {
+        font-size: 3rem;
+    }
+
+    div.feature-container {
+        font-size: 1.3rem;
+    }
+
+    div.source-wrapper {
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+
+    /* TV COMMONS */
+
+    div.information-container p,
+    div.wikipedia-container {
+        font-size: 1.7rem;
+    }
+}
