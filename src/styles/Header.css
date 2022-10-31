@@ -29,10 +29,11 @@ div.header-container header h2 {
     margin-bottom: 0;
 }
 
-div.header-container header img {
-    -webkit-transition: opacity 0.1s;
-    -moz-transition: opacity 0.1s;
-    transition: opacity 0.1s;
+div.toggler-wrapper {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
     cursor: pointer;
 }
 
@@ -44,24 +45,26 @@ ul.overhead-container {
     position: absolute;
     left: 0;
     right: 0;
-    height: 0;
-    opacity: 0;
     background-color: #070724;
     border-bottom: 1px solid black;
-    overflow-y: hidden;
     -webkit-box-shadow: 0 0.5rem 0.7rem 0.1rem black;
     box-shadow: 0 0.5rem 0.7rem 0.1rem black;
-    -webkit-transition: opacity 0.2s;
-    -moz-transition: opacity 0.2s;
-    transition: opacity 0.2s;
-}
-
-ul.overhead-container.expanded {
+    -webkit-transition: visibility 0.4s, opacity 0.4s;
+    -moz-transition: visibility 0.4s, opacity 0.4s;
+    transition: visibility 0.4s, opacity 0.4s;
+    z-index: 2;
     margin-top: 0;
     padding: calc(8px + 1.5625vw);
-    z-index: 2;
-    height: auto;
+}
+
+ul.overhead-container.show {
+    visibility: visible;
     opacity: 1;
+}
+
+ul.overhead-container.hide {
+    visibility: hidden;
+    opacity: 0;
 }
 
 li.vertical-planet-choice-container {
@@ -78,7 +81,8 @@ li.vertical-planet-choice-container {
     transition: color 0.3s;
 }
 
-li.vertical-planet-choice-container:hover {
+li.vertical-planet-choice-container:hover,
+li.vertical-planet-choice-container:focus {
     background-color: #030318;
     color: white;
 }
@@ -149,6 +153,9 @@ li.header-feature-wrapper.selected::after {
     bottom: 0;
     background-color: var(--selected-feature-after-background-color);
 }
+li.header-feature-wrapper.selected:focus::after {
+    background-color: white;
+}
 
 /* bottom-border animation */
 li.header-feature-wrapper {
@@ -167,12 +174,15 @@ li.header-feature-wrapper::after {
     transition: width ease-in-out 0.25s;
 }
 
-/* commons */
+/* Mobile COMMONS */
+
 li.header-feature-wrapper.selected::after,
-li.header-feature-wrapper:hover::after {
+li.header-feature-wrapper:hover::after,
+li.header-feature-wrapper:focus::after {
     width: 100%;
     right: 0;
 }
+
 /* Tablet */
 
 @media (min-width: 768px) {
@@ -180,6 +190,13 @@ li.header-feature-wrapper:hover::after {
         -webkit-flex-direction: column;
         flex-direction: column;
         padding-bottom: 0;
+    }
+
+    div.toggler-wrapper {
+        width: 0;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
     }
 
     ul.horizontal-planet-choice-container {
@@ -203,33 +220,50 @@ li.header-feature-wrapper:hover::after {
         -moz-transition: color 0.3s;
         transition: color 0.3s;
     }
-    li.horizontal-planet-choice:nth-child(1):hover {
-        color: #def4fc;
-    }
-    li.horizontal-planet-choice:nth-child(2):hover {
-        color: #f7cc7f;
-    }
-    li.horizontal-planet-choice:nth-child(3):hover {
-        color: #545bfe;
-    }
-    li.horizontal-planet-choice:nth-child(4):hover {
-        color: #ff6a45;
-    }
-    li.horizontal-planet-choice:nth-child(5):hover {
-        color: #ecad7a;
-    }
-    li.horizontal-planet-choice:nth-child(6):hover {
-        color: #fccb6b;
-    }
-    li.horizontal-planet-choice:nth-child(7):hover {
-        color: #65f0d5;
-    }
-    li.horizontal-planet-choice:nth-child(8):hover {
-        color: #497efa;
+
+    li.horizontal-planet-choice.selected {
+        color: var(--selected-planet-color);
     }
 
-    /* commons */
-    div.header-container header img,
+    li.horizontal-planet-choice:nth-child(1):hover,
+    li.horizontal-planet-choice:nth-child(1):focus {
+        color: #def4fc;
+    }
+    li.horizontal-planet-choice:nth-child(2):hover,
+    li.horizontal-planet-choice:nth-child(2):focus {
+        color: #f7cc7f;
+    }
+    li.horizontal-planet-choice:nth-child(3):hover,
+    li.horizontal-planet-choice:nth-child(3):focus {
+        color: #545bfe;
+    }
+    li.horizontal-planet-choice:nth-child(4):hover,
+    li.horizontal-planet-choice:nth-child(4):focus {
+        color: #ff6a45;
+    }
+    li.horizontal-planet-choice:nth-child(5):hover,
+    li.horizontal-planet-choice:nth-child(5):focus {
+        color: #ecad7a;
+    }
+    li.horizontal-planet-choice:nth-child(6):hover,
+    li.horizontal-planet-choice:nth-child(6):focus {
+        color: #fccb6b;
+    }
+    li.horizontal-planet-choice:nth-child(7):hover,
+    li.horizontal-planet-choice:nth-child(7):focus {
+        color: #65f0d5;
+    }
+    li.horizontal-planet-choice:nth-child(8):hover,
+    li.horizontal-planet-choice:nth-child(8):focus {
+        color: #497efa;
+    }
+    /* intententionally left at the end so that it can override whatever child is selected */
+    li.horizontal-planet-choice.selected:focus {
+        color: white;
+    }
+
+    /* Tablet COMMONS */
+
     ul.overhead-container,
     ul.header-features-container {
         display: none;
@@ -252,7 +286,8 @@ li.header-feature-wrapper:hover::after {
         margin: 0;
     }
 
-    /* commons */
+    /* Desktop and onwards COMMONS */
+
     div.header-container header,
     ul.horizontal-planet-choice-container {
         -webkit-justify-content: space-between;
