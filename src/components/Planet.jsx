@@ -24,14 +24,14 @@ export default function Planet(props) {
                 className={props.name}
                 src={
                     props.feature === "overview" || props.feature === "surface"
-                        ? `/src/assets/planet-${name}.svg`
-                        : `/src/assets/planet-${name}-internal.svg`
+                        ? `../src/assets/planet-${name}.svg`
+                        : `../src/assets/planet-${name}-internal.svg`
                 }
                 alt={`image of ${name}`}
             />
             <img
                 className="with-magnifier"
-                src={`/src/assets/geology-${name}.png`}
+                src={`../src/assets/geology-${name}.png`}
                 style={
                     props.feature === "surface"
                         ? { opacity: "1" }
