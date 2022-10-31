@@ -1,20 +1,21 @@
-// utils.js
+// utilities.js
+
+/**
+ * Features that will be used in Header component (mobile layout) and Information component (tablet, desktop, etc. layouts)
+ */
+export const features = ["overview", "structure", "surface"];
 
 /**
  * This method only adds the expanded class to the overhead-container in the Header component.
  */
 export function toggleOverhead() {
-    console.log("here");
-    const hamburgerEl = document.getElementById("hamburger");
     const overheadEl = document.getElementById("overhead");
-    // opened
-    if (hamburgerEl.style.opacity === "0.1") {
-        hamburgerEl.style.opacity = "1";
-        overheadEl.classList.remove("expanded");
+    if (overheadEl.classList.contains("hide")) {
+        overheadEl.classList.add("show");
+        overheadEl.classList.remove("hide");
     } else {
-        // closed
-        hamburgerEl.style.opacity = "0.1";
-        overheadEl.classList.add("expanded");
+        overheadEl.classList.add("hide");
+        overheadEl.classList.remove("show");
     }
 }
 
@@ -37,8 +38,3 @@ export function handlePlanetFade(update, state) {
     }, 400);
     // the total animation time is 1.6s
 }
-
-/**
- * Features that will be used in Header component (mobile layout) and Information component (tablet, desktop, etc. layouts)
- */
-export const features = ["overview", "structure", "surface"];
