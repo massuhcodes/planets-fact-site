@@ -132,7 +132,7 @@ div.neptune-wrapper {
     }
 }
 
-/* Desktop and onwards */
+/* Desktop */
 
 @media (min-width: 1440px) {
     div.planet-container {
@@ -187,6 +187,54 @@ div.neptune-wrapper {
     div.neptune-wrapper {
         height: calc(450px + 1.5625vw);
         width: calc(450px + 1.5625vw);
+    }
+}
+
+/* TV */
+
+@media (min-width: 2560px) {
+    img.with-magnifier {
+        height: calc(300px + 1.5625vw);
+    }
+
+    div.mercury-wrapper {
+        height: calc(350px + 1.5625vw);
+        width: calc(350px + 1.5625vw);
+    }
+
+    div.venus-wrapper {
+        height: calc(450px + 1.5625vw);
+        width: calc(450px + 1.5625vw);
+    }
+
+    div.earth-wrapper {
+        height: calc(500px + 1.5625vw);
+        width: calc(500px + 1.5625vw);
+    }
+
+    div.mars-wrapper {
+        height: calc(370px + 1.5625vw);
+        width: calc(370px + 1.5625vw);
+    }
+
+    div.jupiter-wrapper {
+        height: calc(1050px + 1.5625vw);
+        width: calc(1050px + 1.5625vw);
+    }
+
+    div.saturn-wrapper {
+        height: calc(1100px + 1.5625vw);
+        width: calc(1100px + 1.5625vw);
+    }
+
+    div.uranus-wrapper {
+        height: calc(608px + 1.5625vw);
+        width: calc(608px + 1.5625vw);
+    }
+
+    div.neptune-wrapper {
+        height: calc(600px + 1.5625vw);
+        width: calc(600px + 1.5625vw);
     }
 }
 
