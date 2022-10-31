@@ -2,8 +2,8 @@
 
 import "/src/styles/App.css";
 import { useState, createContext, useEffect } from "react";
-import { planets } from "/src/planet-data";
-import { toggleOverhead, handlePlanetFade } from "../utils/utils";
+import { planetData } from "/src/planet-data";
+import { toggleOverhead, handlePlanetFade } from "/src/utils/utilities";
 import Header from "/src/components/Header";
 import Main from "/src/components/Main";
 
@@ -15,10 +15,13 @@ export default function App() {
     const storedPlanet = JSON.parse(localStorage.getItem("planet"));
     // if no saved planet, have mercury be the planet state
     const [planet, setPlanet] = useState(
-        storedPlanet ? storedPlanet : planets[0]
+        storedPlanet ? storedPlanet : planetData[0]
     );
     // overview will always be the intial feature state
     const [feature, setFeature] = useState("overview");
+    // switch boolean values for BurgerClose in Header
+    // will be called in getPlanet and in the Header component itself (user canceled)
+    const [isClosed, setIsClosed] = useState(false);
 
     // whenever a planet is selected save it here
     useEffect(() => {
@@ -31,9 +34,15 @@ export default function App() {
      * @param {Number} index - chosen planet's index
      */
     function getPlanet(orientation, index) {
-        if (orientation === "vertical") toggleOverhead();
+        if (orientation === "vertical") {
+            toggleBurger();
+            setTimeout(
+                () => handlePlanetFade(setPlanet, planetData[index]),
+                300
+            );
+        }
         // animate planet change
-        handlePlanetFade(setPlanet, planets[index]);
+        handlePlanetFade(setPlanet, planetData[index]);
     }
 
     /**
@@ -45,16 +54,29 @@ export default function App() {
         handlePlanetFade(setFeature, feature);
     }
 
+    /**
+     * This function calls the toggleOverhead function to
+     * handle the overhead-container animation and
+     * updates the BurgerClose's isClosed state which
+     * is needed for the correct configuration
+     */
+    function toggleBurger() {
+        toggleOverhead();
+        setIsClosed((prevIsClosed) => !prevIsClosed);
+    }
+
     return (
         <PlanetContext.Provider value={[planet, feature, switchFeatureTo]}>
             <div className="app-container">
                 <Header
-                    planets={planets}
-                    chosenPlanet={planet}
+                    planets={planetData}
                     color={planet.hues.color}
-                    chosenFeature={feature}
+                    chosenPlanet={planet}
                     getPlanet={getPlanet}
+                    chosenFeature={feature}
                     switchFeatureTo={switchFeatureTo}
+                    burgerIsClosed={isClosed}
+                    toggleBurger={toggleBurger}
                 />
                 <Main />
             </div>
