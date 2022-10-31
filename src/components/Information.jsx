@@ -2,24 +2,27 @@
 
 import "/src/styles/Information.css";
 import { nanoid } from "nanoid";
-import { features } from "../utils/utils";
-import source from "/src/assets/icon-source.svg";
+import { features } from "../utils/utilities";
 
 export default function Information(props) {
     const link = "https://en.wikipedia.org/wiki/";
     // features for tablet, desktop, and larger screens
     const informationFeatures = features.map((feature, index) => (
         <div
+            key={nanoid()}
             className={`feature-container ${
                 props.feature === feature ? "selected" : ""
             }`}
-            key={nanoid()}
+            tabIndex="0"
+            onKeyUp={(event) => {
+                if (event.key === "Enter") props.switchFeatureTo(feature);
+            }}
             onClick={() => props.switchFeatureTo(feature)}
             style={
                 props.feature === feature
                     ? {
-                          "--selected-Information-feature-background-color":
-                              props.featureBackgroundColor,
+                          "--selected-information-feature-background-color":
+                              props.hues.backgroundColor,
                       }
                     : {}
             }
@@ -58,10 +61,9 @@ export default function Information(props) {
                         Wikipedia
                     </a>
                     <img
-                        src={source}
-                        alt={
-                            "An image indicating further information is available"
-                        }
+                        src={"/src/assets/icon-source.svg"}
+                        title="An image indicating further information is available"
+                        alt="source"
                     />
                 </div>
             </div>
