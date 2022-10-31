@@ -114,8 +114,13 @@ span.name {
     font-weight: bold;
 }
 
-li.vertical-planet-choice-container img {
+div.chevron-wrapper {
     width: 0.3rem;
+}
+
+div.chevron-wrapper {
+    display: flex;
+    align-self: center;
 }
 
 ul.header-features-container {
