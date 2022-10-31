@@ -3,6 +3,7 @@
 import "/src/styles/Information.css";
 import { nanoid } from "nanoid";
 import { features } from "../utils/utilities";
+import source from "/src/assets/icon-source.svg";
 
 export default function Information(props) {
     const link = "https://en.wikipedia.org/wiki/";
@@ -61,7 +62,7 @@ export default function Information(props) {
                         Wikipedia
                     </a>
                     <img
-                        src={"/src/assets/icon-source.svg"}
+                        src={source}
                         title="An image indicating further information is available"
                         alt="source"
                     />
