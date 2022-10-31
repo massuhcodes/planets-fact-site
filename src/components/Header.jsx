@@ -1,5 +1,10 @@
 // Header.jsx
 
+// Attribution
+console.log(
+    "The BurgerClose component along with its animation was made by Joe (a.k.a. frontend-joe). Thanks Joe for your great work. See the rest of his work at https://github.com/frontend-joe."
+);
+
 import "/src/styles/Header.css";
 import { nanoid } from "nanoid";
 import { BurgerClose } from "react-icons-animated";
