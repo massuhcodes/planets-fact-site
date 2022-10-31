@@ -120,6 +120,7 @@ div.chevron-wrapper {
 
 div.chevron-wrapper {
     display: flex;
+    -webkit-align-self: center;
     align-self: center;
 }
 
