@@ -98,8 +98,9 @@ a.neptune-link:active {
     text-decoration-color: #497efa;
 }
 
-div.wikipedia-container img {
+div.source-wrapper {
     height: 0.85rem;
+    width: 0.85rem;
 }
 
 div.features-container {
@@ -137,7 +138,7 @@ div.wikipedia-container {
 }
 
 div.wikipedia-container a,
-div.wikipedia-container img,
+div.source-wrapper,
 div.wikipedia-container span::after {
     margin-left: 0.5rem;
 }
