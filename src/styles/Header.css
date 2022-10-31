@@ -275,7 +275,7 @@ li.header-feature-wrapper:focus::after {
     }
 }
 
-/* Desktop and onwards */
+/* Desktop */
 
 @media (min-width: 1440px) {
     div.header-container header {
@@ -297,5 +297,17 @@ li.header-feature-wrapper:focus::after {
     ul.horizontal-planet-choice-container {
         -webkit-justify-content: space-between;
         justify-content: space-between;
+    }
+}
+
+/* TV */
+
+@media (min-width: 2560px) {
+    div.header-container header h2 {
+        font-size: 2.2rem;
+    }
+
+    ul.horizontal-planet-choice-container {
+        font-size: 1.1rem;
     }
 }
