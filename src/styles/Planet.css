@@ -258,15 +258,6 @@ div.neptune-wrapper {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -276,12 +267,12 @@ div.neptune-wrapper {
     }
 }
 
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
+@keyframes fadeIn {
+    from {
         opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 
@@ -290,6 +281,15 @@ div.neptune-wrapper {
         opacity: 1;
     }
     to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
         opacity: 0;
     }
 }
