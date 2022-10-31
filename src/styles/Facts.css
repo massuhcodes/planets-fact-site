@@ -12,7 +12,9 @@ div.facts-container {
 
 div.fact-container {
     display: flex;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
+    -webkit-align-items: center;
     align-items: center;
     border: solid thin #97979733;
     padding: calc(8px + 1.5625vw);
