@@ -122,7 +122,7 @@ export const planetData = [
         },
         facts: {
             one: { property: "rotation time", value: "10.8 hours" },
-            two: { property: "revolution time", value: "29.46 yeaars" },
+            two: { property: "revolution time", value: "29.46 years" },
             three: { property: "radius", value: "58,232 km" },
             four: { property: "average temperature", value: "-138°c" },
         },
