@@ -4,6 +4,7 @@ import "/src/styles/Header.css";
 import { nanoid } from "nanoid";
 import { BurgerClose } from "react-icons-animated";
 import { features } from "/src/utils/utilities";
+import chevron from "/src/assets/icon-chevron.svg";
 
 export default function Header(props) {
     // planet choices for mobile layout
@@ -24,7 +25,7 @@ export default function Header(props) {
                 />
                 <span className="name">{planet.name.toUpperCase()}</span>
             </div>
-            <img src={"/src/assets/icon-chevron.svg"} />
+            <img src={chevron} />
         </li>
     ));
 
