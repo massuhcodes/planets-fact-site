@@ -1,15 +1,21 @@
--   Table of Contents
-    1. [About Planets-Fact-Site](#about-planets-fact-site)
-        - [Built With](#built-with)
-    2. [Usage](#usage)
-        - [Mobile](#mobile)
-        - [Tablet](#tablet)
-        - [Desktop](#desktop)
-        - [TV](#tv)
-    3. [Acknowledgements](#acknowledgements)
-    4. [Live Site](#live-site)
-    5. [License](#license)
-    6. [Connect](#connect)
+# Table of Contents
+
+1. [About Planets-Fact-Site](#about-planets-fact-site)
+    - [Built With](#built-with)
+2. [Getting Started](#getting-started)
+    - [Prerequisites](#prerequisites)
+    - [Installation](#installation)
+3. [Usage](#usage)
+    - [Mobile](#mobile)
+    - [Tablet](#tablet)
+    - [Desktop](#desktop)
+    - [TV](#tv)
+4. [Acknowledgements](#acknowledgements)
+5. [Live Site](#live-site)
+6. [License](#license)
+7. [Connect](#connect)
+   <br />
+   <br />
 
 # About Planets-Fact-Site
 
@@ -30,6 +36,32 @@ This project is a milestone for me as a frontend developer.
 -   ReactJS
 
 _Note:_ Will be implementing Sass soon!
+<br />
+<br />
+
+# Getting Started
+
+## Prerequisites
+
+You will need to have the latest version of NPM:
+
+```bash
+npm install -g npm
+```
+
+## Installation
+
+To be able to have this project on your local machine, follow these steps:
+
+1. Fork the repository.
+2. Clone the repository onto your local machine through terminal:
+    ```bash
+    git clone https://github.com/your_username/planets-fact-site.git
+    ```
+3. Install NPM packages through your cloned project's terminal:
+    ```bash
+    npm install
+    ```
 
 # Usage
 
@@ -50,26 +82,34 @@ The web-app was made with the intention of it looking good at different screen s
 ### **TV**
 
 The GIF at the top of this file is actually the web-app rendered in a TV screen size. _Note:_ the layout here is the same as that of the Desktop's.
+<br />
+<br />
 
 # Acknowledgements
 
 The BurgerClose component along with its animation was made by Joe (a.k.a. frontend-joe). Special thanks to Joe for his great work. See the rest of his work at https://github.com/frontend-joe.
+<br />
+<br />
 
 # Live Site
 
 Please feel more than welcome to experience the web-app for yourself live. I really do hope you enjoy it.
 <br /><br />
 Live: [Planets-Fact-Site](https://massuhcodes-planets-fact-site.netlify.app/)
+<br />
+<br />
 
 # License
 
 Distributed under the MIT License. See LICENSE.md for more information.
+<br />
+<br />
 
 # Connect
 
 -   **Email:** massuhcodes@gmail.com
--   **LinkedIn:** linkedin.com/in/farahmassuh
--   **Twitter:** twitter.com/farah_massuh
+-   **LinkedIn:** https://www.linkedin.com/in/farahmassuh/
+-   **Twitter:** https://twitter.com/farah_massuh
 
 <br />
 
