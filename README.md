@@ -1,4 +1,4 @@
-# About This Project
+# About Planets-Fact-Site
 
 ![Alt Text](https://media.giphy.com/media/1xr1hGdTmgKrzgD1eX/giphy.gif)
 
@@ -26,6 +26,6 @@ The web-app was made with the intention of it looking good at different screen s
 
 ### **TV**
 
-The GIF at the top of this file is actually the web-app rendered in a TV screen size. _Note:_ the layout here is the same of that of the Desktop's.
+The GIF at the top of this file is actually the web-app rendered in a TV screen size. _Note:_ the layout here is the same as that of the Desktop's.
 
-[Back to Top](#about-this-project)
+[Back to Top](#about-planets-fact-site)
