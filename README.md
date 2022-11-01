@@ -1,12 +1,35 @@
+-   Table of Contents
+    1. [About Planets-Fact-Site](#about-planets-fact-site)
+        - [Built With](#built-with)
+    2. [Usage](#usage)
+        - [Mobile](#mobile)
+        - [Tablet](#tablet)
+        - [Desktop](#desktop)
+        - [TV](#tv)
+    3. [Acknowledgements](#acknowledgements)
+    4. [Live Site](#live-site)
+    5. [License](#license)
+    6. [Let's Connect](#let's-connect)
+
 # About Planets-Fact-Site
 
 ![Alt Text](https://media.giphy.com/media/1xr1hGdTmgKrzgD1eX/giphy.gif)
 
-The inspiration of this project came from frontendmentor.io's planets-fact-site. The main idea of this project was to create a website that consisted of three different layouts, specifically mobile, tablet, and desktop screens. I began with the mobile layout and progressed onwards through the use of media queries.
+The web-app displays information about the 8 planets in our Solar System. It breifly gives an overview for each planet and touches upon both their internal structures and surface geologies.
+
+The inspiration of this project came from frontendmentor.io's planets-fact-site. The main idea of this project was to create a website that consisted of three different layouts, specifically mobile, tablet, and desktop screens. I began with the mobile layout and progressed onwards through the use of media queries. Also, rather than creating a page for each planet, ReactJS allowed me to maintain one single page and then rely on its hook **useState** to transition between planets. I found this approach both ideal and easier to maintain.
 
 This particular project was dear to me because I am fascinated with space, espeically our Solar System. Jupiter being the king of the planets, Saturn the jewel of the solar system, Mars actually being smaller than Earth, and both Uranus and Neptune with their beautiful colors, all beckoned me to complete the project in a genuinue manner. I wanted to make sure the colors, font sizes, layouts, and animations worked for different screens sizes and browsers. I think I've done that. To be honest, there were many setbacks throughout the coding journey, but with the help of the online community, I perservered. For example, I learned to convert the svgs into React components in order to optimize the app when planet transitions were undergoing. Without doing so, delays between the transitions would have been noticeable, resulting in an awkward user experience.
 
 This project is a milestone for me as a frontend developer.
+
+<br />
+
+## Built With
+
+-   ReactJS
+
+_Note:_ Will be implementing Sass soon!
 
 # Usage
 
@@ -27,5 +50,27 @@ The web-app was made with the intention of it looking good at different screen s
 ### **TV**
 
 The GIF at the top of this file is actually the web-app rendered in a TV screen size. _Note:_ the layout here is the same as that of the Desktop's.
+
+# Acknowledgments
+
+The BurgerClose component along with its animation was made by Joe (a.k.a. frontend-joe). Special thanks to Joe for his great work. See the rest of his work at https://github.com/frontend-joe.
+
+# Live Site
+
+Please feel more than welcome to experience the web-app for yourself live. I really do hope you enjoy it.
+<br /><br />
+Live: [Planets-Fact-Site](https://massuhcodes-planets-fact-site.netlify.app/)
+
+# License
+
+Distributed under the MIT License. See LICENSE.md for more information.
+
+# Let's Connect
+
+-   **Email:** massuhcodes@gmail.com
+-   **LinkedIn:** linkedin.com/in/farahmassuh
+-   **Twitter:** twitter.com/farah_massuh
+
+<br />
 
 [Back to Top](#about-planets-fact-site)
