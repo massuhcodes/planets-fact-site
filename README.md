@@ -51,7 +51,7 @@ The web-app was made with the intention of it looking good at different screen s
 
 The GIF at the top of this file is actually the web-app rendered in a TV screen size. _Note:_ the layout here is the same as that of the Desktop's.
 
-# Acknowledgments
+# Acknowledgements
 
 The BurgerClose component along with its animation was made by Joe (a.k.a. frontend-joe). Special thanks to Joe for his great work. See the rest of his work at https://github.com/frontend-joe.
 
