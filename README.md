@@ -13,7 +13,7 @@
 4. [Acknowledgements](#acknowledgements)
 5. [Live Site](#live-site)
 6. [License](#license)
-7. [Connect](#connect)
+7. [Get In Touch](#get-in-touch)
    <br />
    <br />
 
@@ -101,11 +101,11 @@ Live: [Planets-Fact-Site](https://massuhcodes-planets-fact-site.netlify.app/)
 
 # License
 
-Distributed under the MIT License. See LICENSE.md for more information.
+Distributed under the MIT License. See LICENSE.txt for more information.
 <br />
 <br />
 
-# Connect
+# Get In Touch
 
 -   **Email:** massuhcodes@gmail.com
 -   **LinkedIn:** https://www.linkedin.com/in/farahmassuh/
