@@ -9,7 +9,7 @@
     3. [Acknowledgements](#acknowledgements)
     4. [Live Site](#live-site)
     5. [License](#license)
-    6. [Let's Connect](#let's-connect)
+    6. [Connect](#connect)
 
 # About Planets-Fact-Site
 
@@ -65,7 +65,7 @@ Live: [Planets-Fact-Site](https://massuhcodes-planets-fact-site.netlify.app/)
 
 Distributed under the MIT License. See LICENSE.md for more information.
 
-# Let's Connect
+# Connect
 
 -   **Email:** massuhcodes@gmail.com
 -   **LinkedIn:** linkedin.com/in/farahmassuh
