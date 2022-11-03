@@ -23,11 +23,11 @@
 
 [challenge]: https://www.frontendmentor.io/challenges/planets-fact-site-gazqN8w_f
 
-The web-app displays information about the 8 planets in our Solar System. It breifly gives an overview for each planet and touches upon both their internal structures and surface geologies.
+The web-app displays information about the 8 planets of our Solar System. It briefly gives an overview for each planet and touches upon both their internal structures and surface geologies.
 
 The inspiration of this project came from frontendmentor.io's planets-fact-site [challenge]. The main idea of this project was to create a website that consisted of three different layouts, specifically mobile, tablet, and desktop screens. I began with the mobile layout and progressed onwards through the use of media queries. Also, rather than creating a page for each planet, ReactJS allowed me to maintain one single page and then rely on its hook **useState** to transition between planets. I found this approach both ideal and easier to maintain.
 
-This particular project was dear to me because I am fascinated with space, espeically our Solar System. Jupiter being the king of the planets, Saturn the jewel of the solar system, Mars actually being smaller than Earth, and both Uranus and Neptune with their beautiful colors, all beckoned me to complete the project. I wanted to make sure the colors, font sizes, layouts, and animations worked for different screens sizes and browsers. I think I've done that. To be honest, there were many setbacks throughout the coding journey, but with the help of the online community, I perservered. For example, I learned to convert the svgs into React components in order to optimize the app when planet transitions were undergoing. Without doing so, delays between the transitions would have been noticeable, resulting in an awkward user experience.
+This particular project was dear to me because I am fascinated with space, espeically our Solar System. Jupiter being the king of the planets, Saturn the jewel of the Solar System, Mars actually being smaller than Earth, and both Uranus and Neptune with their beautiful colors, all beckoned me to complete the project. I wanted to make sure the colors, font sizes, layouts, and animations worked for different screens sizes and browsers. I think I've done that. To be honest, there were many setbacks throughout the coding journey, but with the help of the online community, I persevered. For example, I learned to convert the svgs into React components in order to optimize the app when planet transitions were undergoing. Without doing so, delays between the transitions would have been noticeable, resulting in an awkward user experience.
 
 This project is a milestone for me as a frontend developer.
 
